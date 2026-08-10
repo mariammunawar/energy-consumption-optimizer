@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fira Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading: "Fira Code", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Core palette — dark mode (OLED-friendly) */
+  --color-primary: oklch(0.58 0.18 255);
+  --color-on-primary: oklch(1.0 0 0);
+  --color-secondary: oklch(0.48 0.15 255);
+  --color-accent: oklch(0.72 0.16 65);
+  --color-background: oklch(0.14 0.01 260);
+  --color-surface: oklch(0.19 0.01 260);
+  --color-foreground: oklch(0.96 0.01 260);
+  --color-muted: oklch(0.30 0.02 260);
+  --color-muted-light: oklch(0.40 0.02 260);
+  --color-border: oklch(0.26 0.02 260);
+  --color-destructive: oklch(0.58 0.22 27);
+  --color-ring: oklch(0.58 0.18 255);
+
+  /* Semantic colors */
+  --color-peak: oklch(0.66 0.17 55);
+  --color-peak-bg: oklch(0.22 0.04 55);
+  --color-offpeak: oklch(0.62 0.13 155);
+  --color-offpeak-bg: oklch(0.20 0.03 155);
+  --color-savings: oklch(0.62 0.15 155);
+  --color-savings-bg: oklch(0.20 0.04 155);
+
+  /* Shadows — subtle glow on dark */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.5);
+  --shadow-xl: 0 16px 48px rgb(0 0 0 / 0.6);
+}
+
+/* Base body styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
